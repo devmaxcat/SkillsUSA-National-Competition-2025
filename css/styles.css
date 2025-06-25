@@ -12,8 +12,8 @@
     --default-font: 'IBM Plex Sans JP';
 
     --background: white;
-    --background-1: lightgray;
-    --background-2: gray;
+    --background-1: rgb(241, 241, 241);
+    --background-2: lightgray;
     --background-3: black;
 
     --text-light: white;
@@ -97,7 +97,11 @@ footer {
 .card img {
     height: 6em;
     width: 100%;
+    object-fit: cover;
     background-color: red;
+}
+.card aside {
+    padding: 1rem;
 }
 
 .triangle-grid {
@@ -181,10 +185,17 @@ footer {
 .contact .contact-methods .contact-method {
     border: var(--border);
     border-radius: var(--border-radius);
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
+.contact .contact-methods .contact-method h3 {
+    margin: 0;
+}
+
 .contact .visit {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-1);
     text-align: center;
 }
@@ -197,35 +208,53 @@ footer {
 
 .contact .faq .question {
     border: var(--border);
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
 /* Menu */
 
 .menu .featured {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     flex-wrap: wrap;
+    align-items: start;
+    column-gap: 1em;
     background-color: var(--background-1);
+    padding-bottom: 2rem;
 }
 
 .menu .featured img {
     flex-shrink: 0;
+    width: 300px;
+    border-radius: var(--border-radius);
+    
 }
 
 .menu .featured aside {
-    
+    text-align: center;
+    border-radius: var(--border-radius);
     background-color: white;
     border: var(--border);
     padding: var(--padding);
+}
+.meal > div {
+    padding: 1rem;
 }
 
 .menu .meals .meal {
     border: var(--border);
     border-radius: var(--border-radius);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 8em 1fr;
+    display: flex;
+    
     margin-bottom: 1rem;
+}
+
+.meal img {
+    
+    height: 100%;
+    object-fit: cover;
 }
 
 .menu .desserts {
@@ -238,11 +267,22 @@ footer {
     border-radius: var(--border-radius);
 }
 
+
+
+
 /* Sustainability */
 
 .sustainability .overview {
     background-color: var(--background-1);
     display: flex;
+}
+
+/* Classes */
+
+.classes .class-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 
