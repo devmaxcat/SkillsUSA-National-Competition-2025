@@ -33,11 +33,34 @@ body,html {
     color: var(--text-dark);
 }
 
+.hamburger {
+    --size: 3rem;
+    height: var(--size);
+    width: var(--size);
 
+    border: none;
+}
+.hamburger > * {
+    height: 1px;
+    position: relative;
+    background-color: var(--text-dark);
+    width: 100%;
+}
+.hamburger .a {
+    top: calc(calc(var(--size)/2)*2);
+}
+.hamburger .b {
+    top: 0;
+}
+.hamburger .c {
+    top: calc(var(--size)/2);
+}
 
 main > section {
     padding: 0 var(--page-margin);
 }
+
+
 
 
 /* Common */ 
@@ -161,6 +184,10 @@ footer img {
 .triangle-grid >*:nth-child(3) {
     grid-column: span 2;
 }
+
+/* Impact */
+
+
 
 /* Home */
 .home .hero {
@@ -502,6 +529,11 @@ a {
 .sustainability .overview img {
     object-fit: cover;
     border: var(--border-radius);
+}
+
+.sustainability .card img {
+    height: auto;
+    width: 100%;
 }
 
 img {
