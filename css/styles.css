@@ -282,11 +282,26 @@ footer {
     padding-bottom: 2rem;
 }
 
+
+
 .mission .intro img {
     width: 350px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .mission .intro {
+        flex-direction: column-reverse;
+       
+    }
+
+    .mission .intro img {
+       float: right;
+       position: relative;
+    }
+  
 }
 
 .mission .story {
