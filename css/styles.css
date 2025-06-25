@@ -203,10 +203,16 @@ footer {
     overflow: hidden;
     display: grid;
     grid-template-columns: 8em 1fr;
+    margin-bottom: 1rem;
 }
 
+.menu .desserts {
+    background-color: var(--background-1);
+    gap: 2rem;
+}
 .menu .desserts .dessert {
     border: var(--border);
+    background-color: var(--background);
     border-radius: var(--border-radius);
 }
 
