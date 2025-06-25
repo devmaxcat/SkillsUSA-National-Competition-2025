@@ -88,6 +88,28 @@ footer {
     background-color: var(--background-3);
 }
 
+.card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: var(--border);
+}
+
+.card img {
+    height: 6em;
+    width: 100%;
+    background-color: red;
+}
+
+.triangle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.triangle-grid >*:nth-child(3) {
+    grid-column: span 2;
+}
+
 /* Home */
 .home .hero {
     background-image: url();
@@ -214,6 +236,13 @@ footer {
     border: var(--border);
     background-color: var(--background);
     border-radius: var(--border-radius);
+}
+
+/* Sustainability */
+
+.sustainability .overview {
+    background-color: var(--background-1);
+    display: flex;
 }
 
 
