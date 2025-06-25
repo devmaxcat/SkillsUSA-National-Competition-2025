@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
 
 :root {
-    --primary-color: rgb(74, 129, 53);
+    --primary-color: rgb(46, 73, 63);
     --button-text-color: rgb(255, 255, 255);
     --border-radius: .2em;
     --border: 1px solid grey;
