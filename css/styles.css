@@ -64,14 +64,25 @@ header {
     display: flex;
     align-items: center;
     background: var(--background-1);
-    padding: 0rem var(--page-margin);
+    padding: 0rem clamp(0rem, var(--page-margin), 10%);
 }
+
+header a {
+    color: black;
+}
+
+
 
 nav {
     display: flex;
     margin-left: auto;
     column-gap: 1rem;
     
+}
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
 }
 
 nav a {
@@ -111,8 +122,13 @@ footer {
     padding: 0 var(--page-margin);
     align-items: center;
     justify-content: space-between;
-    color: var(--text-light);
-    background-color: var(--background-3);
+    
+    background-color: var(--background-2);
+}
+
+footer img {
+    padding-top: 1rem;
+    width: 20em;
 }
 
 .card {
@@ -282,11 +298,26 @@ footer {
     padding-bottom: 2rem;
 }
 
+
+
 .mission .intro img {
     width: 350px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .mission .intro {
+        flex-direction: column-reverse;
+       
+    }
+
+    .mission .intro img {
+       float: right;
+       position: relative;
+    }
+  
 }
 
 .mission .story {
@@ -310,6 +341,12 @@ footer {
     column-gap: 1em;
     background-color: var(--background-1);
     padding-bottom: 2rem;
+}
+
+.menu .featured h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: -1.2rem;
 }
 
 .menu .featured img {
@@ -415,6 +452,26 @@ footer {
     text-align: center;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 800px) {
+    .menu .drinks > * {
+        grid-column: span 2;
+        
+    }
+    .triangle-grid  {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .triangle-grid > * {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    
+}
+
 .menu .special {
     font-size: .95em;
     padding: 1rem;
@@ -438,14 +495,38 @@ footer {
     background-color: var(--background-1);
     display: flex;
     padding-bottom: 2rem;
+    column-gap: 1em;
+}
+
+.sustainability .overview img {
+    object-fit: cover;
+    border: var(--border-radius);
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Classes */
 
+.donation {
+    margin-bottom: 2rem;
+}
+.class-times {
+    margin-bottom: 2rem;
+}
 .classes .class-list {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .classes .class-list {
+        grid-template-columns: 1fr;
+    }
+  
+    
 }
 
 .classes .card img {
