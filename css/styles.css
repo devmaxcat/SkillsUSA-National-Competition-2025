@@ -452,6 +452,26 @@ footer img {
     text-align: center;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 800px) {
+    .menu .drinks > * {
+        grid-column: span 2;
+        
+    }
+    .triangle-grid  {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .triangle-grid > * {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    
+}
+
 .menu .special {
     font-size: .95em;
     padding: 1rem;
@@ -483,12 +503,30 @@ footer img {
     border: var(--border-radius);
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Classes */
 
+.donation {
+    margin-bottom: 2rem;
+}
+.class-times {
+    margin-bottom: 2rem;
+}
 .classes .class-list {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .classes .class-list {
+        grid-template-columns: 1fr;
+    }
+  
+    
 }
 
 .classes .card img {
