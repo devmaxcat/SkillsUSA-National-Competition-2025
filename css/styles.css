@@ -364,7 +364,17 @@ footer img {
     background-color: var(--background-1);
     margin-top: 2rem;
     padding-top: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
+    column-gap: 2em;
 }
+.mission .story img {
+    width: 520px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
 
 .mission .card img {
     width: 100%;
@@ -421,7 +431,19 @@ footer img {
     margin-bottom: 1rem;
 }
 
-
+@media screen and (max-width: 800px) {
+    .mission .story {
+       flex-direction: column-reverse;
+    }
+    .mission .story img {
+       
+        object-fit: cover;
+    } 
+    .impact-container {
+        flex-direction: column;
+    }
+    
+}
 
 .meal img {
     height: 210px;
