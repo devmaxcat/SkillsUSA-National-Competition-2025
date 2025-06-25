@@ -6,7 +6,15 @@
     --border: 1px solid grey;
     --padding: 1rem;
 
-    --default-font: 'IBM Plex Sans JP'
+    --default-font: 'IBM Plex Sans JP';
+
+    --background: white;
+    --background-1: lightgray;
+    --background-2: gray;
+    --background-3: black;
+
+    --text-light: white;
+    --text-dark: black;
 }
 
 * {
@@ -18,6 +26,25 @@ body,html {
     margin: 0;
     font-size: 16px;
     font-family: var(--default-font);
+    color: var(--text-dark);
+}
+
+
+
+/* Common */ 
+
+header {
+    display: flex;
+    background: var(--background-1);
+}
+
+nav {
+    display: flex;
+}
+
+label, input, textarea, select {
+    display: block;
+    width: 100%;
 }
 
 .button {
@@ -25,10 +52,19 @@ body,html {
     border: none;
     border-radius: var(--border-radius);
 }
+.button.secondary {
+    background-color: transparent;
+}
+
+footer {
+    color: var(--text-light);
+    background-color: var(--background-3);
+}
 
 /* Home */
 .home .hero {
-    background-image: url();
+    text-align: center;
+    background-image: url(/img/index/hero.png);
 }
 .home .pages {
     display: flex;
@@ -46,3 +82,48 @@ body,html {
     border: var(--border);
     padding: var(--padding);
 }
+
+.home .offerings {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-1);
+    border-radius: var(--border-radius);
+    text-align: center;
+
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.home .offerings .offering {
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    border: var(--border);
+
+    margin-bottom: 1rem;
+}
+
+.home .offerings .button {
+    display: block;
+    width: 100%;
+}
+
+/* Contact */
+
+.contact .hero {
+    text-align: center;
+    background-image: url(/img/contact-us/hero.png);
+}
+
+.contact .contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+@media screen and (max-width: 800px) {
+    .contact .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}
+
