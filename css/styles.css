@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:100,200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
 
 :root {
-    --primary-color: red;
+    --primary-color: rgb(74, 129, 53);
+    --button-text-color: rgb(255, 255, 255);
     --border-radius: .2em;
     --border: 1px solid grey;
     --padding: 1rem;
 
+    --title-font: 'Lora';
     --default-font: 'IBM Plex Sans JP'
 }
 
@@ -20,8 +23,14 @@ body,html {
     font-family: var(--default-font);
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--title-font);
+}
+
 .button {
     background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--button-text-color);
     border: none;
     border-radius: var(--border-radius);
 }
@@ -29,6 +38,7 @@ body,html {
 /* Home */
 .home .hero {
     background-image: url();
+    text-align: center;
 }
 .home .pages {
     display: flex;
