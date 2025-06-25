@@ -186,8 +186,20 @@ footer img {
 }
 
 /* Impact */
-
-
+.mission .impact {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+}
+.mission .impact-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    text-align: center;
+}
+.mission .impact-container > * {
+    padding: 1rem;
+}
 
 /* Home */
 .home .hero {
